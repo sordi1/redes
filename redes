@@ -1,0 +1,38 @@
+Função fundamental da camada de transporte
+A camada de transporte é responsável por garantir a comunicação fim a fim entre os dispositivos em uma rede. Sua principal função é proporcionar um canal de comunicação confiável, realizando o controle de fluxo, detecção e correção de erros, além de segmentar e reordenar os dados. Protocolos como TCP e UDP operam nessa camada, oferecendo diferentes níveis de confiabilidade e desempenho, dependendo das necessidades da aplicação.
+
+Arquitetura cliente-servidor
+A arquitetura cliente-servidor é um modelo de comunicação em que dois componentes principais interagem: o cliente, que faz solicitações de serviços, e o servidor, que processa e responde a essas solicitações. Essa arquitetura é amplamente utilizada em sistemas distribuídos, como a web, onde o cliente (navegador) solicita páginas ao servidor web, que as entrega para visualização. A interação ocorre de forma hierárquica, com o servidor geralmente centralizando o controle e os dados.
+
+Mecanismo de endereçamento da camada de transporte
+O endereçamento na camada de transporte é realizado por meio de números de porta. Cada porta identifica um processo ou serviço específico em um dispositivo, permitindo que múltiplas aplicações utilizem a rede simultaneamente. Os números de porta são divididos em intervalos regulamentados: as portas conhecidas (0-1023), usadas para serviços bem definidos como HTTP (porta 80) e HTTPS (porta 443), e as portas registradas (1024-49151), destinadas a serviços e aplicações específicas.
+
+Características do UDP e situações de uso
+O UDP (User Datagram Protocol) é um protocolo leve e sem conexão, que não realiza controle de fluxo, correção de erros ou garantia de entrega. Ele é ideal para aplicações que priorizam velocidade e baixa latência, como streaming de vídeo, chamadas VoIP e jogos online. Sua simplicidade reduz a sobrecarga no envio de dados, sendo uma escolha eficiente quando a confiabilidade pode ser gerenciada pela própria aplicação.
+
+O que é uma conexão
+Uma conexão é o estabelecimento de um canal lógico de comunicação entre dois dispositivos na rede, que permite a troca de dados de maneira estruturada. No TCP, por exemplo, a conexão é estabelecida por meio de um processo chamado handshake de três vias. Um esquema ilustrativo desse processo pode mostrar um dispositivo A enviando um pedido SYN para B, que responde com SYN-ACK, seguido do ACK final de A, indicando que a conexão está pronta.
+
+Estabelecimento de uma conexão TCP
+O TCP utiliza o processo de handshake de três vias para estabelecer uma conexão confiável. O cliente envia um pacote SYN ao servidor, solicitando a conexão. O servidor responde com um pacote SYN-ACK, confirmando o recebimento e aceitando a solicitação. Por fim, o cliente envia um pacote ACK, confirmando a aceitação, e a conexão é estabelecida, pronta para a troca de dados.
+
+Funcionamento do campo Code Bits
+O campo Code Bits no cabeçalho TCP contém bandeiras que controlam o estado da conexão. Ele inclui bits como SYN, que indica o início de uma conexão, ACK, usado para confirmar recebimentos, e FIN, que sinaliza o término da conexão. Esses bits permitem a coordenação do estado da comunicação entre os dispositivos, garantindo uma transmissão confiável.
+
+Funcionamento do protocolo DNS
+O DNS (Domain Name System) é o protocolo responsável por traduzir nomes de domínio, como www.example.com, em endereços IP, como 192.168.1.1, que os computadores utilizam para identificar-se na rede. Quando um cliente faz uma solicitação, o DNS consulta uma hierarquia de servidores (recursivos, de raiz, autoritativos) até encontrar o endereço IP correspondente, retornando-o ao solicitante.
+
+Tipos de servidores DNS possíveis
+Os servidores DNS podem ser classificados em quatro tipos principais: servidores recursivos, que recebem as solicitações dos clientes e realizam as consultas; servidores de raiz, que direcionam as consultas para domínios de topo (TLDs); servidores autoritativos, que contêm os registros definitivos de um domínio; e servidores de cache, que armazenam resultados temporariamente para acelerar respostas futuras.
+
+Características do protocolo FTP
+O FTP (File Transfer Protocol) é um protocolo utilizado para a transferência de arquivos entre dispositivos em uma rede. Ele opera no modelo cliente-servidor e pode usar autenticação com nome de usuário e senha. O FTP suporta modos ativo e passivo, permitindo sua adaptação a diferentes configurações de firewall. Apesar de eficiente, é considerado inseguro sem criptografia, sendo frequentemente substituído pelo SFTP (Secure FTP).
+
+Resumo do protocolo HTTP
+O HTTP (Hypertext Transfer Protocol) é o protocolo principal utilizado na comunicação entre navegadores e servidores web. Ele funciona no modelo cliente-servidor e opera de forma sem estado, significando que cada solicitação é independente. Por meio de métodos como GET e POST, o HTTP permite a solicitação e envio de dados. Sua versão mais recente, o HTTP/2, melhora o desempenho e eficiência da comunicação.
+
+
+
+
+
+
